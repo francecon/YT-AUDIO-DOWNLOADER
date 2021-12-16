@@ -26,4 +26,4 @@ pip install -r requirements.txt
 
 ### Developer
 
-(c) 2021, [Francesco Conforte](https://github.com/FrancescoConforte).
+(c) 2021, [Francesco Conforte](https://github.com/francecon/).
