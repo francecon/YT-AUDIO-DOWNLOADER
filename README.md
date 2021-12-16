@@ -10,7 +10,7 @@ To get it, just download the file`ffmpeg-git-full.7z`from [this link](https://ww
 
 Note: `ffmpeg`is a command line tool, therefore on Windows it is required to add the folder containing the `ffmpeg.exe` file to the PATH Environmental Variables of Windows 10. This is automatically done by the python file.
 
-If you want to run the main python file [yt_downloader_with_GUI](), you will need to install modules listed into [requirements.txt]().
+If you want to run the main python file [yt_downloader_with_GUI.py](https://github.com/francecon/YT-AUDIO-DOWNLOADER/blob/main/yt_downloader_with_GUI.py), you will need to install modules listed into [requirements.txt](https://github.com/francecon/YT-AUDIO-DOWNLOADER/blob/main/requirements.txt).
 
 If you have `pip` installed, just type this in a terminal:
 
