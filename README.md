@@ -4,7 +4,7 @@ This work is a simple **Youtube Audio Downloader** written in Python, exploiting
 
 ## **Requirements**
 
-First of all, to luch the [YT AUDIO DOWNLOADER.exe]() it is required having `ffmpeg.exe`on your pc.
+First of all, to luch the [YT AUDIO DOWNLOADER.exe]([YT-AUDIO-DOWNLOADER/YT AUDIO DOWNLOADER.exe at main · francecon/YT-AUDIO-DOWNLOADER · GitHub](https://github.com/francecon/YT-AUDIO-DOWNLOADER/blob/main/YT%20AUDIO%20DOWNLOADER.exe)) it is required having `ffmpeg.exe`on your pc.
 
 To get it, just download the file`ffmpeg-git-full.7z`from [this link](https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z), extract it and move the extracted folder in `Local Disk (C:)`. This moves the folder to the root of your hard drive.
 
