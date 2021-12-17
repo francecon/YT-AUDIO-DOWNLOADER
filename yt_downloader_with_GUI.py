@@ -1,6 +1,6 @@
 import glob
 import os
-os.environ["IMAGEIO_FFMPEG_EXE"] = "C:/ffmpeg-4.4.1-essentials_build/ffmpeg-4.4.1-essentials_build/bin"
+# os.environ["IMAGEIO_FFMPEG_EXE"] = "C:/ffmpeg-4.4.1-essentials_build/ffmpeg-4.4.1-essentials_build/bin"
 import re
 import sys
 import urllib
