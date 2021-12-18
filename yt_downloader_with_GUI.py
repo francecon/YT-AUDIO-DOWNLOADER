@@ -126,8 +126,8 @@ def download():
                         os.path.join(parent_dir, new_filename)
                     ],shell=True)
                     # audioclip = AudioFileClip(os.path.join(parent_dir, default_filename))
-                    # audioclip.close()
                     # audioclip.write_audiofile(os.path.join(parent_dir, new_filename))
+                    # audioclip.close()
                     
                     files = glob.glob(parent_dir+'/*.mp4') 
                     for f in files:
