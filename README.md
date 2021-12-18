@@ -6,7 +6,7 @@ This work is just for educative purposes, I am not encouraging you to use it for
 
 ## **Requirements**
 
-First of all, to run the [YT AUDIO DOWNLOADER.exe](https://github.com/francecon/YT-AUDIO-DOWNLOADER/blob/main/YT%20AUDIO%20DOWNLOADER.exe) it is required having `ffmpeg.exe`on your pc.
+First of all, to run the [YT AUDIO DOWNLOADER.exe](https://github.com/francecon/YT-AUDIO-DOWNLOADER/blob/main/YT%20AUDIO%20DOWNLOADER.exe) it is required to have `ffmpeg.exe`on your pc.
 
 **Note**: to get it, just download the file`ffmpeg-git-essentials.7z`from [this link](https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.7z), extract it and I suggest you to move the extracted folder in `Local Disk (C:)`. As `ffmpeg` is a command line tool, on Windows it is required to add the folder containing the `ffmpeg.exe` file to the PATH Environmental Variable.
 
