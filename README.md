@@ -1,6 +1,6 @@
 # YT AUDIO DOWNLOADER
 
-This work is a simple **Youtube Audio Downloader** written in Python, exploiting `ffmpeg` and turned into an .EXE by using the PyInstaller tool.
+This work is a simple **Youtube Audio Downloader** with **a GUI** written in Python by using `TKinter`, exploiting `ffmpeg` and turned into an .EXE by using the PyInstaller tool.
 
 This work is just for educative purposes, I am not encouraging you to use it for commercial purposes.
 
