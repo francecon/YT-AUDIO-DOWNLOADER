@@ -107,36 +107,38 @@ def download():
                     os.remove(f)
             else:
                 pass
-            
-            for i in list_of_urls:
-                yt = YouTube(i)
-                title = yt.title
-                title = re.sub(r'[\\/*?:"<>|]',"-",title)
-                default_filename = title + ".mp4"
-                new_filename = title+'.mp3'
-                parent_dir = os.path.join(dirname, "Canzoni_mp4")
-                str = yt.streams.get_audio_only()
-                str.download(output_path=parent_dir,filename=default_filename,max_retries=10)
-                
-                
-                try:
-                    subprocess.run([
-                        'ffmpeg',
-                        '-i', os.path.join("./Canzoni_mp4", default_filename),
-                        os.path.join(parent_dir, new_filename)
-                    ],shell=True)
-                    # audioclip = AudioFileClip(os.path.join(parent_dir, default_filename))
-                    # audioclip.write_audiofile(os.path.join(parent_dir, new_filename))
-                    # audioclip.close()
+            try:
+                for i in list_of_urls:
+                    yt = YouTube(i)
+                    title = yt.title
+                    title = re.sub(r'[\\/*?:"<>|]',"-",title)
+                    default_filename = title + ".mp4"
+                    new_filename = title+'.mp3'
+                    parent_dir = os.path.join(dirname, "Canzoni_mp4")
+                    str = yt.streams.get_audio_only()
+                    str.download(output_path=parent_dir,filename=default_filename,max_retries=10)
                     
-                    files = glob.glob(parent_dir+'/*.mp4') 
-                    for f in files:
-                        os.remove(f)  
-                except:
-                    files = glob.glob(parent_dir+'/*.mp4') 
-                    for f in files:
-                        os.remove(f)
-                    m_box.showerror("Error", "Errore di conversione da MP4 a MP3") 
+                    
+                    try:
+                        subprocess.run([
+                            'ffmpeg',
+                            '-i', os.path.join("./Canzoni_mp4", default_filename),
+                            os.path.join(parent_dir, new_filename)
+                        ],shell=True)
+                        # audioclip = AudioFileClip(os.path.join(parent_dir, default_filename))
+                        # audioclip.write_audiofile(os.path.join(parent_dir, new_filename))
+                        # audioclip.close()
+                        
+                        files = glob.glob(parent_dir+'/*.mp4') 
+                        for f in files:
+                            os.remove(f)  
+                    except:
+                        files = glob.glob(parent_dir+'/*.mp4') 
+                        for f in files:
+                            os.remove(f)
+                        m_box.showerror("Error", "Errore di conversione da MP4 a MP3") 
+            except:
+                m_box.showerror("Error", "Errore di download") 
 
             m_box.showinfo("Scaricato", "Ho scaricato tutto")
         else:
