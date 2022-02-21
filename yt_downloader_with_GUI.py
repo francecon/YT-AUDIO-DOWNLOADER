@@ -100,13 +100,13 @@ def download():
     else:
         answer=m_box.askyesnocancel("Richiesta", "Vuoi davvero scaricare tutte le canzoni?")
         if answer:
-            answer=m_box.askyesnocancel("Richiesta", "Vuoi cancellare tutte le canzoni che ci sono nella cartella 'Canzoni_mp4'?")
-            if answer:
-                files = glob.glob('./Canzoni_mp4/*')
-                for f in files:
-                    os.remove(f)
-            else:
-                pass
+            if os.path.isdir(dirname+"/Canzoni_mp4"): #if Canzoni_mp4 esiste allora chiedi se vuole cancellare
+                answer=m_box.askyesnocancel("Richiesta", "Vuoi cancellare tutte le canzoni che ci sono nella cartella 'Canzoni_mp4'?")
+                if answer:
+                    files = glob.glob('./Canzoni_mp4/*')
+                    for f in files:
+                        os.remove(f)
+
             try:
                 for i in list_of_urls:
                     yt = YouTube(i)
@@ -121,8 +121,8 @@ def download():
                     
                     try:
                         subprocess.run([
-                            'ffmpeg',
-                            '-i', os.path.join("./Canzoni_mp4", default_filename),
+                            'ffmpeg', '-y',
+                            '-i', os.path.join(parent_dir, default_filename),
                             os.path.join(parent_dir, new_filename)
                         ],shell=True)
                         # audioclip = AudioFileClip(os.path.join(parent_dir, default_filename))
